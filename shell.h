@@ -1,6 +1,7 @@
 #ifndef _SHELL_H_
 #define _SHELL_H_
 
+#include <errno.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
@@ -10,14 +11,13 @@
 #include <sys/stat.h>
 #include <limits.h>
 #include <fcntl.h>
-#include <errno.h>
 
 /* for read/write buffers */
 #define READ_BUF_SIZE 1024
 #define WRITE_BUF_SIZE 1024
 #define BUF_FLUSH -1
 
-/* for command chaining */
+/* For command chaining */
 #define CMD_NORM	0
 #define CMD_OR		1
 #define CMD_AND		2
@@ -38,10 +38,10 @@ extern char **environ;
 
 
 /**
- * struct liststr - singly linked list
- * @num: the number field
- * @str: a string
- * @next: points to the next node
+ * struct liststr - Singly linked list !
+ * @num: the number fields
+ * @str: a string !
+ * @next: points to the next node !
  */
 typedef struct liststr
 {
@@ -56,10 +56,10 @@ typedef struct liststr
  *@arg: a string generated from getline containing arguements
  *@argv: an array of strings generated from arg
  *@path: a string path for the current command
- *@argc: the argument count
- *@line_count: the error count
- *@err_num: the error code for exit()s
- *@linecount_flag: if on count this line of input
+ *@argc: the argument count!
+ *@line_count: the error count.
+ *@err_num: the error code for exit()s !
+ *@linecount_flag: if on Count this line of input
  *@fname: the program filename
  *@env: linked list local copy of environ
  *@environ: custom modified copy of environ from LL env
@@ -101,8 +101,8 @@ typedef struct passinfo
 
 /**
  *struct builtin - contains a builtin string and related function
- *@type: the builtin command flag
- *@func: the function
+ *@type: The builtin command flag
+ *@func: the function !!
  */
 typedef struct builtin
 {
